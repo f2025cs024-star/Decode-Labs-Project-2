@@ -117,6 +117,18 @@ a:hover {
   color: var(--color-primary);
 }
 
+.btn--social {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  gap: 0.5rem;
+}
+
+.btn--social:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
 /* Layout Utilities */
 .main {
   max-width: 1200px;
@@ -307,6 +319,17 @@ section {
 .card .btn {
   margin-top: 1rem;
   align-self: flex-start;
+}
+
+a.card {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+a.card:hover {
+  text-decoration: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 15px -3px rgba(29, 78, 216, 0.15);
 }
 
 .card--link .btn {
