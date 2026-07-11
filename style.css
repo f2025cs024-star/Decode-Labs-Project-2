@@ -27,8 +27,68 @@ html {
 body {
   font-family: var(--font-sans);
   color: var(--color-text);
-  background-color: var(--color-bg);
   line-height: 1.6;
+  background: linear-gradient(-45deg, #e0e7ff, #fbcfe8, #c7d2fe, #fce7f3);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating animated orbs for extra "live" effect */
+body::before, body::after {
+  content: "";
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  opacity: 0.6;
+  animation: floatOrb 20s infinite ease-in-out alternate;
+}
+
+body::before {
+  width: 400px;
+  height: 400px;
+  background: #93c5fd; /* Light Blue */
+  top: -100px;
+  left: -100px;
+}
+
+body::after {
+  width: 500px;
+  height: 500px;
+  background: #c4b5fd; /* Light Purple */
+  bottom: -150px;
+  right: -150px;
+  animation-delay: -10s;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(20vw, 20vh) scale(1.2); }
+}
+
+/* Glassmorphism overlays to make the background shine through */
+.card, .hero, .header, .footer, .about__content, .schedule__table tr {
+  background-color: rgba(255, 255, 255, 0.55) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+}
+
+.header {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.nav {
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 /* Fluid Typography */
