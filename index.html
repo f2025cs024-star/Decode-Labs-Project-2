@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NIIT Study Resource Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">NIIT Hub</div>
+            
+            <!-- Mobile Nav Toggle -->
+            <button class="nav-toggle" popovertarget="nav-menu" aria-label="Toggle navigation menu">
+                <span class="nav-toggle__icon"></span>
+            </button>
+            
+            <!-- Navigation Menu using Popover API -->
+            <nav id="nav-menu" class="nav" popover="auto">
+                <button class="nav-close" popovertarget="nav-menu" popovertargetaction="hide" aria-label="Close menu">&times;</button>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#courses" class="nav__link">Courses</a></li>
+                    <li class="nav__item"><a href="#schedule" class="nav__link">Schedule</a></li>
+                    <li class="nav__item"><a href="#links" class="nav__link">Links</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">NIIT Study Resource Hub</h1>
+                <p class="hero__tagline">Course notes, schedules, and resources for BSCS students — all in one place.</p>
+                <a href="#courses" class="btn btn--primary">Browse Resources</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <article class="about__content">
+                <h2 class="section-title">About the Hub</h2>
+                <p>Built by a BSCS student (Muhammad Talha Zubair, Fall 2025–2029 session) to help peers quickly find course materials and stay organized.</p>
+            </article>
+        </section>
+
+        <section id="courses" class="courses">
+            <h2 class="section-title">Courses</h2>
+            <div class="grid">
+                <article class="card">
+                    <h3 class="card__title">Programming Fundamentals</h3>
+                    <p class="card__desc">Introduction to C++ and basic programming logic.</p>
+                    <a href="#" class="btn btn--secondary">View Resources</a>
+                </article>
+                <article class="card">
+                    <h3 class="card__title">Discrete Structures</h3>
+                    <p class="card__desc">Logic, sets, relations, and mathematical proofs.</p>
+                    <a href="#" class="btn btn--secondary">View Resources</a>
+                </article>
+                <article class="card">
+                    <h3 class="card__title">Calculus &amp; Analytical Geometry</h3>
+                    <p class="card__desc">Functions, limits, derivatives, and integrals.</p>
+                    <a href="#" class="btn btn--secondary">View Resources</a>
+                </article>
+                <article class="card">
+                    <h3 class="card__title">Digital Logic Design</h3>
+                    <p class="card__desc">Boolean algebra, logic gates, and digital circuits.</p>
+                    <a href="#" class="btn btn--secondary">View Resources</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="schedule" class="schedule">
+            <h2 class="section-title">Weekly Schedule</h2>
+            <div class="schedule__container">
+                <table class="schedule__table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Time</th>
+                            <th scope="col">Monday</th>
+                            <th scope="col">Tuesday</th>
+                            <th scope="col">Wednesday</th>
+                            <th scope="col">Thursday</th>
+                            <th scope="col">Friday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Time">08:00 AM - 10:00 AM</td>
+                            <td data-label="Monday">Programming Fundamentals</td>
+                            <td data-label="Tuesday">Self Study</td>
+                            <td data-label="Wednesday">Calculus</td>
+                            <td data-label="Thursday">Discrete Structures</td>
+                            <td data-label="Friday">Self Study</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Time">10:00 AM - 12:00 PM</td>
+                            <td data-label="Monday">Calculus</td>
+                            <td data-label="Tuesday">DLD Lab</td>
+                            <td data-label="Wednesday">PF Lab</td>
+                            <td data-label="Thursday">Discrete Structures</td>
+                            <td data-label="Friday">Digital Logic Design</td>
+                        </tr>
+                        <tr>
+                            <td data-label="Time">01:00 PM - 03:00 PM</td>
+                            <td data-label="Monday">Islamic Studies</td>
+                            <td data-label="Tuesday">English</td>
+                            <td data-label="Wednesday">Self Study</td>
+                            <td data-label="Thursday">English</td>
+                            <td data-label="Friday">Jummah Break</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="links" class="links">
+            <h2 class="section-title">Useful Links</h2>
+            <div class="grid grid--small">
+                <article class="card card--link">
+                    <h3 class="card__title">W3Schools</h3>
+                    <a href="https://www.w3schools.com/" class="btn btn--text" target="_blank" rel="noopener">Visit Site &rarr;</a>
+                </article>
+                <article class="card card--link">
+                    <h3 class="card__title">MDN Web Docs</h3>
+                    <a href="https://developer.mozilla.org/" class="btn btn--text" target="_blank" rel="noopener">Visit Site &rarr;</a>
+                </article>
+                <article class="card card--link">
+                    <h3 class="card__title">GeeksforGeeks</h3>
+                    <a href="https://www.geeksforgeeks.org/" class="btn btn--text" target="_blank" rel="noopener">Visit Site &rarr;</a>
+                </article>
+                <article class="card card--link">
+                    <h3 class="card__title">Khan Academy</h3>
+                    <a href="https://www.khanacademy.org/" class="btn btn--text" target="_blank" rel="noopener">Visit Site &rarr;</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__contact">
+                <p>Contact: <a href="mailto:example@niit.edu.pk">example@niit.edu.pk</a></p>
+            </div>
+            <div class="footer__social">
+                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+            <p class="footer__copyright">&copy; 2026 NIIT Study Resource Hub. Built by Muhammad Talha Zubair.</p>
+        </div>
+    </footer>
+</body>
+</html>
